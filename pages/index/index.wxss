@@ -1,0 +1,204 @@
+.index-container{
+  background: rgba(255, 255, 255, 1);
+  min-height: 100%;
+  box-sizing: border-box;
+}
+.index-container .swi{
+  width: 750rpx;
+  height: 375rpx;
+  position: relative;
+}
+.index-container .swi .set{
+  width: 38rpx;
+  height: 38rpx;
+  position: absolute;
+  left: 30rpx;
+  top: 30rpx;
+  z-index: 99;
+}
+.index-container .swi .home-swiper{
+  height: 375rpx;
+}
+.index-container .tab-list{
+  padding: 15rpx 21rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35rpx;
+}
+.index-container .tab-list .btn{
+  margin: 0;
+  padding: 0;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  background: #fff;
+}
+.index-container .tab-list .btn::after{
+  border: none;
+}
+.index-container .tab-list .item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.index-container .tab-list .item image{
+  width: 127rpx;
+  height: 127rpx;
+}
+.index-container .tab-list .item view{
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+}
+.index-container .company{
+  padding: 15rpx 21rpx;
+}
+.index-container .company .title{
+  padding: 0 0 21rpx 9rpx;
+}
+.index-container .company .title view:nth-child(1){
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+  margin-bottom: 4rpx;
+}
+.index-container .company .title view:nth-child(2){
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #424242;
+}
+.index-container .company .main{
+  background: #FCF9F7;
+  padding: 20rpx;
+  border-radius: 30rpx;
+}
+.index-container .company .main .top{
+  padding: 30rpx;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+}
+.index-container .company .main .top .item{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.index-container .company .main .top .item .to{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14rpx;
+  align-items: center;
+}
+.index-container .company .main .top .item .to image{
+  width: 35rpx;
+  height: 30rpx;
+}
+.index-container .company .main .top .item .to view{
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.index-container .company .main .top .item .txt{
+  word-break:break-all;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #333333;
+}
+.index-container .company .main .address{
+  padding: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+.index-container .company .main .address .item{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.index-container .company .main .address .item .to{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14rpx;
+  align-items: center;
+}
+.index-container .company .main .address .item .to image{
+  width: 35rpx;
+  height: 30rpx;
+}
+.index-container .company .main .address .item .to view{
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.index-container .company .main .address .item .txt{
+  word-break:break-all;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #333333;
+}
+.index-container .company .main .kefu{
+  padding: 30rpx;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  align-items: center;
+}
+.index-container .company .main .kefu image{
+  height: 30rpx;
+  width: 30rpx;
+  margin-right: 10rpx;
+}
+.index-container .company .main .kefu .btn{
+  margin: 0;
+  padding: 0;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #FC7432;
+  background: #fff;
+}
+.index-container .company .main .kefu .btn::after{
+  border: none;
+}
+/* .index-container .company .main .kefu view{
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #FC7432;
+} */
+.index-container .bot{
+  padding: 30rpx 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.index-container .bot image{
+  width: 75rpx;
+  height: 35rpx;
+  margin-bottom: 14rpx;
+}
+.index-container .bot .tousu{
+  display: flex;
+}
+.index-container .bot .tousu view:nth-child(1){
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.index-container .bot .tousu view:nth-child(2){
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #FC7432;
+}

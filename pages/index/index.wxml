@@ -1,0 +1,91 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<view class="index-container">
+  <view class="swi">
+    <image class="set" src="../../images/set.png" bindtap="toSet"></image>
+    <swiper class="home-swiper" autoplay="{{autoplay}}" duration="2000">
+      <block wx:for-items="{{lunboData}}">
+        <swiper-item>
+          <image style="height:375rpx;width:750rpx" src="{{item.imgurl}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="tab-list" wx:if="{{isBind}}">
+    <view class="item" wx:for-items="{{tabList}}" bindtap="toPage" data-id="{{item.id}}" >
+      <image src="{{item.pic}}"></image>
+      <view>{{item.name}}</view>
+    </view>
+  </view>
+  <view class="tab-list" wx:else>
+    <!-- <view class="item" bindtap="toPage" data-id="1" >
+      <image src="../../images/fqfw.png"></image>
+      <view>发起服务</view>
+    </view> -->
+    <button class="item btn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumbers">
+      <image src="../../images/fqfw.png"></image>
+      <view>发起服务</view>
+    </button>
+    <view class="item" bindtap="toPage" data-id="2" >
+      <image src="../../images/bxsc.png"></image>
+      <view>报修商城</view>
+    </view>
+    <button class="item btn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+      <image src="../../images/wdjd.png"></image>
+      <view>我的进度</view>
+    </button>
+    <!-- <view class="item" bindtap="toPage" data-id="3" >
+      <image src="../../images/wdjd.png"></image>
+      <view>我的进度</view>
+    </view> -->
+    <view class="item" bindtap="toPage" data-id="4" >
+      <image src="../../images/zsk.png"></image>
+      <view>知识库</view>
+    </view>
+  </view>
+  <view class="company">
+    <view class="title">
+      <view>Company</view>
+      <view>公司信息</view>
+    </view>
+    <view class="main">
+      <view class="top">
+        <view class="item">
+          <view class="to">
+            <view>公司邮箱</view>
+            <image src="../../images/email.png"></image>
+          </view>
+          <text class="txt">{{companyInfo.email}}</text>
+        </view>
+        <view class="item">
+          <view class="to">
+            <view>公司电话</view>
+            <image src="../../images/phone.png"></image>
+          </view>
+          <view class="txt">{{companyInfo.tel}}</view>
+        </view>
+      </view>
+      <view class="address">
+        <view class="item">
+          <view class="to">
+            <view>公司地址</view>
+            <image src="../../images/location.png"></image>
+          </view>
+          <view class="txt">{{companyInfo.fullAddress}}</view>
+        </view>
+      </view>
+      <view class="kefu">
+        <image bindtap="callKF" src="../../images/fefu.png"></image>
+        <!-- <view bindtap="callKF">联系客服</view> -->
+        <!-- <contact-button type="default-dark" size="20" session-from="weapp">联系客服</contact-button> -->
+        <button class="btn" type="default" open-type="contact" >联系客服</button>
+      </view>
+    </view>
+  </view>
+  <view class="bot">
+    <image src="../../images/logo.png"></image>
+    <view class="tousu">
+      <view>投诉电话：</view>
+      <view>0354-541545</view>
+    </view>
+  </view>
+</view>

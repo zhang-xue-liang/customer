@@ -1,0 +1,20 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<view class="equipment">
+  <view style="height:30rpx;background:#f9f9f9"></view>
+  <view class="main">
+    <view class="title" wx:if="{{type === '手机号查询'}}">
+      产品序列号
+    </view>
+    <view class="title" wx:else>
+      手机号
+    </view>
+    <view class="ipt">
+      <input type="text" placeholder="{{place}}" value="{{inputValue}}" bindinput="bindinput"/>
+      <view bindtap="scanCode" class="scanBox">
+        <image src="../../images/saoyisao.png" wx:if="{{type === '手机号查询'}}"></image>
+      </view>
+    </view>
+    <view class="quert" bindtap="search">查询</view>
+    <view class="change" bindtap="changeType" >{{type}}</view>
+  </view>
+</view>

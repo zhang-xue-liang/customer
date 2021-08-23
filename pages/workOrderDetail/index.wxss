@@ -1,0 +1,668 @@
+.incident{
+  min-height: 100%;
+  background: #F9F9F9;
+  box-sizing: border-box;
+}
+.incident .title{
+  height: 88rpx;
+  padding: 0 30rpx;
+  display: flex;
+  background: #fff;
+  justify-content: space-between;
+}
+.incident .title .item{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.incident .title .item view:nth-child(1){
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+}
+.incident .title .item .border{
+  position: absolute;
+  left: 0;
+  bottom: 10rpx;
+  width: 100%;
+  height: 3px;
+  display: flex;
+  justify-content: center;
+}
+.incident .title .item .border view{
+  width: 52rpx;
+  height: 3px;
+  border-radius: 3rpx;
+  background: #FC7431;
+}
+.incident .title .active view:nth-child(1){
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #FC7431;
+}
+.incident .schedule-main{
+  padding: 30rpx;
+}
+.incident .schedule-main .schedule{
+  padding: 30rpx;
+  border-radius: 30rpx;
+  background: #fff;
+}
+.incident .schedule-main .schedule .titl{
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+}
+
+
+.incident .schedule-main .schedule .wrap{
+  display: flex;
+  flex-direction: column;
+}
+.incident .schedule-main .schedule .wrap .item {
+  display: flex;
+  justify-content: space-between;
+}
+.incident .schedule-main .schedule .wrap .item .left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.incident .schedule-main .schedule .wrap .item .left view:nth-child(1){
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+  margin-top: 38rpx;
+}
+.incident .schedule-main .schedule .wrap .item .left view:nth-child(2){
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  text-align: right;
+  margin-bottom: 38rpx;
+}
+.incident .schedule-main .schedule .wrap .item .center {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.incident .schedule-main .schedule .wrap .item .center .cricle{
+  width: 20rpx;
+  height: 20rpx;
+  border: 1px solid rgba(252, 116, 49, 1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.incident .schedule-main .schedule .wrap .item .center .cricle view{
+  width: 12rpx;
+  height: 12rpx;
+  background: rgba(252, 116, 49, 1);
+  border-radius: 50%;
+}
+.incident .schedule-main .schedule .wrap .item .center .line-top{
+  height: 50%;
+  border-left: 2rpx solid rgba(252, 116, 49, 1);
+  position: absolute;
+  left: 50%;
+  top: -10rpx;
+}
+.incident .schedule-main .schedule .wrap .item .center .line-bot{
+  height: 50%;
+  border-left: 2rpx solid rgba(252, 116, 49, 1);
+  position: absolute;
+  left: 50%;
+  bottom: -10rpx;
+}
+.incident .schedule-main .schedule .wrap .item .right{
+  flex: 0 0 70%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.incident .schedule-main .schedule .wrap .item .right view{
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  display: flex;
+  align-items: center;
+}
+.incident .schedule-main .schedule .wrap .item .right .phone{
+  color: rgba(49, 159, 252, 1);
+}
+
+.incident .schedule-main .schedule .wrap .last .center .line-bot{
+  border: none;
+}
+.incident .schedule-main .schedule .wrap .first .center .cricle view{
+  background: #fff;
+
+}
+.incident .schedule-main .schedule .wrap .first .center .line-top{
+  border: none;
+}
+.incident .schedule-main .schedule .wrap .first .center .line-bot{
+  border-left: 2rpx dashed rgba(252, 116, 49, 1);
+
+}
+.incident .schedule-main .schedule .wrap .second .center .line-top{
+  border-left: 2rpx dashed rgba(252, 116, 49, 1);
+}
+
+.incident .schedule-main .customerInfo{
+  padding: 30rpx;
+  border-radius: 30rpx;
+  background: #fff;
+  margin-top: 30rpx;
+}
+.incident .schedule-main .customerInfo .titl{
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 50rpx;
+}
+.incident .schedule-main .customerInfo .customerInfo-main{
+  margin-bottom: 30rpx;
+}
+.incident .schedule-main .customerInfo .customerInfo-main .item{
+  display: flex;
+  justify-content: space-between;
+}
+.incident .schedule-main .customerInfo .customerInfo-main .item:nth-child(2){
+  margin: 80rpx 0;
+}
+.incident .schedule-main .customerInfo .customerInfo-main .item view:nth-child(1){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+.incident .schedule-main .customerInfo .customerInfo-main .item view:nth-child(2){
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.incident .schedule-main .eventInfo{
+  padding: 30rpx;
+  border-radius: 30rpx;
+  background: #fff;
+  margin-top: 30rpx;
+}
+.incident .schedule-main .eventInfo .titl{
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 50rpx;
+}
+.incident .schedule-main .eventInfo .eventInfo-main .item{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80rpx;
+}
+.incident .schedule-main .eventInfo .eventInfo-main .item:last-child{
+  margin-bottom: 0;
+}
+.incident .schedule-main .eventInfo .eventInfo-main .item .left{
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+.incident .schedule-main .eventInfo .eventInfo-main .item .right{
+  display: flex;
+}
+.incident .schedule-main .eventInfo .eventInfo-main .item .right view{
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.incident .schedule-main .btn-area{
+  margin-top: 30rpx;
+}
+.incident .schedule-main .btn-area .btn-areamain{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24rpx;
+}
+.incident .schedule-main .btn-area .btn-areamain view:nth-child(1){
+  height: 72rpx;
+  border: 1px solid #999;
+  border-radius: 10rpx;
+  padding: 0 72rpx;
+  line-height: 72rpx;
+  background: #fff;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  margin-right: 30rpx;
+}
+.incident .schedule-main .btn-area .btn-areamain view:nth-child(2){
+  height: 76rpx;
+  border-radius: 10rpx;
+  padding: 0 72rpx;
+  line-height: 76rpx;
+  background: #ccc;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #fff;
+}
+.incident .schedule-main .btn-area .tip{
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+  text-align: center;
+}
+
+.incident .gd-receipt{
+  padding: 30rpx;
+}
+.incident .gd-receipt .attachment{
+  padding: 30rpx;
+  background: #fff;
+  border-radius: 30rpx;
+}
+.incident .gd-receipt .attachment .titl{
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20rpx;
+}
+.incident .gd-receipt .attachment .attachment-main{
+  display: flex;
+}
+.incident .gd-receipt .attachment .attachment-main image{
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 30rpx;
+}
+.incident .gd-receipt .partsInfo{
+  margin-top: 30rpx;
+  background: #fff;
+  border-radius: 30rpx;
+  padding: 30rpx;
+}
+.incident .gd-receipt .partsInfo .titl{
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 50rpx;
+}
+.incident .gd-receipt .partsInfo .item{
+  background-color: #F9F9F9;
+  margin-bottom: 20rpx;
+  padding: 30rpx;
+}
+.incident .gd-receipt .partsInfo .item .info1{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28rpx;
+}
+.incident .gd-receipt .partsInfo .item .info1 .name{
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+.incident .gd-receipt .partsInfo .item .info1 .price{
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #E80001;
+}
+.incident .gd-receipt .partsInfo .item .info2{
+  display: flex;
+}
+.incident .gd-receipt .partsInfo .item .info2 .label{
+  font-size: 22rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.incident .gd-receipt .partsInfo .item .info2 .value{
+  font-size: 22rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  margin-right: 30rpx;
+}
+.incident .gd-receipt .partsInfo .item .info2 .flex{
+  flex: 1;
+}
+.incident .gd-receipt .partsInfo .item .info2 .number{
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+.incident .gd-receipt .partsInfo .total{
+  margin-top: 50rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.incident .gd-receipt .partsInfo .total .number{
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.incident .gd-receipt .partsInfo .total .price{
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+
+
+
+.incident .gd-receipt .partsInfo .partsInfo-main{
+  margin-bottom: 30rpx;
+}
+.incident .gd-receipt .partsInfo .partsInfo-main .item{
+  margin-bottom: 80rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.incident .gd-receipt .partsInfo .partsInfo-main .item:last-child{
+  margin-bottom: 0;
+}
+.incident .gd-receipt .partsInfo .partsInfo-main .item view:nth-child(1){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+.incident .gd-receipt .partsInfo .partsInfo-main .item view:nth-child(2){
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.incident .gd-receipt .otherInfo{
+  padding: 30rpx;
+  border-radius: 30rpx;
+  background: #fff;
+  margin-top: 30rpx;
+}
+.incident .gd-receipt .otherInfo .titl{
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 50rpx;
+}
+
+.incident .gd-receipt .otherInfo .otherInfo-main .item{
+  margin-bottom: 80rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.incident .gd-receipt .otherInfo .otherInfo-main .item view:nth-child(1){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+.incident .gd-receipt .otherInfo .otherInfo-main .item view:nth-child(2){
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+
+.incident .gd-receipt .otherInfo .otherInfo-main .qianming .ti{
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 20rpx;
+}
+.incident .gd-receipt .otherInfo .otherInfo-main .qianming .qmwrap{
+  height: 196rpx;
+  background: #FFFFFF;
+  border: 1px dashed #CCCCCC;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.incident .canpin{
+  padding: 30rpx;
+}
+.incident .canpin .main{
+  background: #fff;
+  margin-bottom: 30rpx;
+  border-radius: 30rpx;
+  padding: 30rpx;
+}
+.incident .canpin .main .titl{
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 30rpx;
+}
+.incident .canpin .main .item{
+  padding: 26rpx 20rpx;
+  border-radius: 10rpx;
+  background: #FAFAFA;
+  margin-bottom: 30rpx;
+}
+.incident .canpin .main .item .xingh{
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.incident .canpin .main .item .xingh view:nth-child(1){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+.incident .canpin .main .item .xingh view:nth-child(2){
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+}
+.incident .canpin .main .item .canshu{
+  padding-top: 20rpx;
+}
+.incident .canpin .main .item .canshu .ti{
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 20rpx;
+}
+.incident .canpin .main .item .canshu .wrap{
+  background: #F2F2F2;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx 0;
+}
+.incident .canpin .main .item .canshu .wrap view{
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  margin-bottom: 30rpx;
+  border-right: 1px solid #CCCCCC;
+  padding: 0 20rpx;
+}
+.incident .canpin .other{
+  margin-top: 30rpx;
+  background: #fff;
+  border-radius: 30rpx;
+  padding: 30rpx;
+}
+.incident .canpin .other .tit{
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 5rpx;
+}
+.incident .canpin .other .item{
+  padding: 40rpx;
+  border-bottom: 1px solid #EEEEEE;
+  display: flex;
+  justify-content: space-between;
+}
+.incident .canpin .other .item view:nth-child(1){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+.incident .canpin .other .item view:nth-child(2){
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+
+
+.incident .parts{
+  padding: 30rpx;
+}
+.incident .parts .parts-main{
+  padding: 30rpx;
+  background: #fff;
+  border-radius: 30rpx;
+  margin-bottom: 30rpx;
+}
+.incident .parts .parts-main .titl{
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 10rpx;
+}
+.incident .parts .parts-main .list{
+  background-color: #FAFAFA;
+  margin-bottom: 20rpx;
+}
+.incident .parts .parts-main .total{
+  background-color: #FAFAFA;
+}
+.incident .parts .parts-main .item{
+  display: flex;
+  border-bottom: 1px solid #eee;
+  padding: 40rpx 20rpx;
+  justify-content: space-between;
+}
+.incident .parts .parts-main .item:last-child{
+  border: none;
+}
+.incident .parts .parts-main .item view:nth-child(1){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+.incident .parts .parts-main .item view:nth-child(2){
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.incident .pingjia{
+  padding: 30rpx;
+}
+.incident .pingjia .pingjia-wrap{
+  height: 800rpx;
+  background: #fff;
+  border-radius: 30rpx;
+  padding: 30rpx;
+}
+.incident .pingjia .pingjia-wrap .xing{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14rpx;
+}
+.incident .pingjia .pingjia-wrap .xing image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.incident .pingjia .pingjia-wrap .tip{
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  text-align: center;
+}
+.incident .pingjia .pingjia-wrap .txt{
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+  text-align: center;
+  margin-top: 80rpx;
+}
+.loading{
+  text-align: center;
+  font-size: 22rpx;
+  font-weight: 500;
+  color: #999999;
+}
+
+.incident .pop-wrap{
+  width: 600rpx;
+  height: 240rpx;
+  padding-top: 80rpx;
+  border-radius: 30rpx;
+}
+.incident .pop-wrap .txt{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+  line-height: 48rpx;
+}
+.incident .pop-wrap .bots{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  height: 88rpx;
+}
+.incident .pop-wrap .bots view{
+  flex: 0 0 50%;
+  text-align: center;
+  line-height: 88rpx;
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+}
+.incident .pop-wrap .bots view:nth-child(1){
+  color: #FC7431;
+  border-top: 1px solid #FC7431;
+}
+.incident .pop-wrap .bots view:nth-child(2){
+  color: #fff;
+  background: #FC7431;
+}
+

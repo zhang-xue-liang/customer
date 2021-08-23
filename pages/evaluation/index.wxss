@@ -1,0 +1,67 @@
+.evaluation{
+  height: 100%;
+  background: #F9F9F9;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.evaluation .main{
+  height: 784rpx;
+  background: #fff;
+  border-radius: 30rpx;
+  padding: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.evaluation .main .title{
+  border-bottom: 1px solid #EEEEEE;
+  padding-bottom: 25rpx;
+  margin-bottom: 25rpx;
+  width: 460rpx;
+}
+.evaluation .main .title view:nth-child(1){
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 15rpx;
+  text-align: center;
+}
+.evaluation .main .title view:nth-child(2){
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+  text-align: center;
+}
+.evaluation .main .tip{
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+  text-align: center;
+  margin-top: 15rpx;
+}
+.evaluation .main textarea{
+  border-radius: 10rpx;
+  border: 1px solid #ccc;
+  padding: 21rpx;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+  margin-top: 50rpx;
+}
+.evaluation .main .btn{
+  width: 630rpx;
+  height: 76rpx;
+  line-height: 76rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  background: #FC7431;
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin-top: 60rpx;
+}

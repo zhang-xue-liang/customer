@@ -1,0 +1,39 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<view class="repair">
+  <view class="head">
+    <image src="/images/search.png"></image>
+    <input bindinput="inputSearch" confirm-type="search" bindconfirm="doSearch" type="text" placeholder="请输入备件名称进行查询"/>
+  </view>
+  <view class="list">
+    <view class="item" wx:for="{{listData}}" wx:for-item="item" wx:key="{{index}}">
+      <view class="left">
+        <image src="{{item.picture || defaultImg}}"></image>
+      </view>
+      <view class="right">
+        <view class="top">{{item.name}}</view>
+        <view class="center">
+          <view class="binhao">
+            <view>编号：</view>
+            <view>{{item.sparePartsCode}}</view>
+          </view>
+          <view class="guige">
+            <view>类别：</view>
+            <view>{{item.typeName || '暂无类别'}}</view>
+          </view>
+        </view>
+        <view class="bot">
+          <view class="le">
+            <view class="danwei">
+              <view>单位：</view>
+              <view>{{item.unitName || '暂无单位'}}</view>
+            </view>
+          </view>
+          <view class="ri">￥{{item.priceValue}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="buttom" wx:if="{{noMore && !loading && total !== 0}}">没有更多...</view>
+  <view class="buttom" wx:if="{{loading}}">加载中...</view>
+  <view class="buttom" wx:if="{{!loading && total === 0}}">暂无数据</view>
+</view>

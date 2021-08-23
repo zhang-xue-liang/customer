@@ -1,0 +1,143 @@
+.order-list{
+  background: #f9f9f9;
+  padding: 30rpx;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+.order-list .good-information{
+  width: 690rpx;
+  border-radius: 30rpx;
+  box-sizing: border-box;
+}
+.order-list .good-information .item{
+  padding: 39rpx 30rpx 30rpx 30rpx;
+  margin-bottom: 30rpx;
+  background: #fff;
+  border-radius: 30rpx;
+}
+.order-list .good-information .item .head{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5rpx;
+}
+.order-list .good-information .item .head view:nth-child(1){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+}
+.order-list .good-information .item .head .yiwanc{
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  height: 46rpx;
+  line-height: 46rpx;
+  text-align: center;
+  padding: 0 20rpx;
+  background: rgba(91, 91, 91, .1);
+  border-radius: 23rpx;
+}
+.order-list .good-information .item .head .yifahuo{
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(252, 116, 49, 1);
+  height: 46rpx;
+  line-height: 46rpx;
+  text-align: center;
+  padding: 0 20rpx;
+  background: rgba(252, 116, 49, .1);
+  border-radius: 23rpx;
+}
+.order-list .good-information .item .head .yizifu{
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(49, 183, 252, 1);
+  height: 46rpx;
+  line-height: 46rpx;
+  text-align: center;
+  padding: 0 20rpx;
+  background: rgba(49, 183, 252, .1);
+  border-radius: 23rpx;
+}
+.order-list .good-information .item .main {
+  display: flex;
+  padding: 30rpx 0;
+  border-bottom: 1px solid #eee;
+}
+.order-list .good-information .item .main .left{
+  margin-right: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.order-list .good-information .item .main .left image{
+  width: 160rpx;
+  height: 160rpx;
+}
+.order-list .good-information .item .main .right{
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.order-list .good-information .item .main .right .info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.order-list .good-information .item .main .right .info view:nth-child(1){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+}
+.order-list .good-information .item .main .right .info view:nth-child(2){
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.order-list .good-information .item .main .right .info view:nth-child(3){
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.order-list .good-information .item .main .right .act{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.order-list .good-information .item .main .right .act view:nth-child(1){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  text-align: right;
+}
+.order-list .good-information .item .main .right .act view:nth-child(2){
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+  text-align: right;
+}
+.order-list .good-information .item .bot{
+  padding-top: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.order-list .good-information .item .bot view:nth-child(1){
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.order-list .good-information .item .bot view:nth-child(2){
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #E80001;
+}

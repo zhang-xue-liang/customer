@@ -1,0 +1,54 @@
+.productInfo{
+  background: #F9F9F9;
+  box-sizing: border-box;
+  padding: 30rpx;
+}
+.productInfo .baseInfo{
+  margin-bottom: 30rpx;
+}
+.productInfo .main{
+  background-color: #fff;
+  border-radius: 30rpx;
+  padding: 20rpx 30rpx;
+}
+.productInfo .main .item{
+  padding: 40rpx;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+}
+.productInfo .main .item:last-child{
+  border: none;
+}
+.productInfo .main .item .left{
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+.productInfo .main .item .right{
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.productInfo .main .item .active{
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #31BCFC;
+}
+.productInfo .btn{
+  padding: 30rpx;
+}
+.productInfo .btn view{
+  height: 84rpx;
+  border: 1px solid #ccc;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 84rpx;
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+}

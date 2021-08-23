@@ -1,0 +1,173 @@
+var getDates =  function (time, splitStr) {
+  console.log(time)
+  if (!time) return '';
+  var times = parseInt(time.replace("/Date(", "").replace(")/", ""));
+  var date = getDate(times);
+  var M = date.getMonth() + 1;
+  var y = date.getFullYear();
+  var d = date.getDate();
+  if (M < 10) M = "0" + M;
+  if (d < 10) d = "0" + d;
+
+  if (splitStr)
+      return y +splitStr + M +splitStr+d;
+  else
+      return {
+      y: y,
+      M: M,
+      d: d
+      };
+}
+var orderSattusFilter = function (index) {
+  var a
+  switch (index) {
+    case '1':
+        a = '订单已发货'
+        break;
+    case '2':
+        a = '待接受'
+        break;
+    case '3':
+        a = '进行中'
+        break;
+        break;
+  }
+  return a;
+}
+var noticeTypeFilter = function (index) {
+  var a
+  switch (index) {
+    case '1':
+        a = '派单通知'
+        break;
+    case '2':
+        a = '转单通知'
+        break;
+        break;
+  }
+  return a;
+}
+var incomeTypeFilter = function (index) {
+  var a
+  switch (index) {
+    case '1':
+        a = '已结算'
+        break;
+        break;
+  }
+  return a;
+}
+var withdrawalTypeFilter = function (index) {
+  var a
+  switch (index) {
+    case '1':
+      a = '提现中'
+      break;
+    case '2':
+      a = '已到账'
+      break;
+        break;
+  }
+  return a;
+}
+var gdRecordFilter = function (index) {
+  var a
+  switch (index) {
+    case '1':
+      a = '已结算'
+      break;
+    case '2':
+      a = '待审核'
+      break;
+      case '3':
+      a = '待评价'
+      break;
+        break;
+  }
+  return a;
+}
+var repairScheduleFilter = function (index) {
+  var a
+  switch (index) {
+    case '1':
+      a = '待分配'
+      break;
+    case '2':
+      a = '已派单'
+      break;
+      case '3':
+      a = '已评价'
+      break;
+        break;
+  }
+  return a;
+}
+
+var workOrderStatus = function(status) {
+    var res = '';
+    switch (status){
+        case 0:
+            res = '待指派';
+            break;
+        case 1:
+            res = '已指派';
+            break;
+        case 2:
+            res = '已完成';
+            break;
+        case 3:
+            res = '已取消';
+            break;
+        case 4:
+            res = '异常';
+            break;
+        case 5:
+            res = '被转派';
+            break;
+        case 6:
+            res = '已回访';
+            break;
+        default:
+            res = '未知状态'
+    }
+    return res;
+}
+
+var serviceOrderStatus = function(status) {
+    var res = '';
+    switch (status){
+        case 0:
+            res = '待指派';
+            break;
+        case 1:
+            res = '已指派';
+            break;
+        case 2:
+            res = '已完成';
+            break;
+        case 3:
+            res = '已取消';
+            break;
+        case 4:
+            res = '异常';
+            break;
+        case 5:
+            res = '已回访';
+            break;
+        default:
+            res = '未知状态'
+    }
+    return res;
+}
+
+module.exports = {
+    getDates: getDates,
+    orderSattusFilter:orderSattusFilter,
+    noticeTypeFilter: noticeTypeFilter,
+    incomeTypeFilter: incomeTypeFilter,
+    withdrawalTypeFilter: withdrawalTypeFilter,
+    gdRecordFilter: gdRecordFilter,
+    repairScheduleFilter: repairScheduleFilter,
+    workOrderStatus:workOrderStatus,
+    serviceOrderStatus:serviceOrderStatus
+}

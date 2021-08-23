@@ -1,0 +1,21 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<view class="evaluation">
+  <view class="main">
+    <view class="title">
+      <view>服务已完成</view>
+      <view>请评价一下为您服务的人员吧</view>
+    </view>
+    <view class="xing">
+      <van-rate
+        value="{{ value }}"
+        size="{{ 30 }}"
+        color="#FCC031"
+        void-icon="star"
+        void-color="#eee"
+      />
+    </view>
+    <view class="tip">请对此次服务评分</view>
+    <textarea model:value="{{satisfactionDesc}}" fixed="true" class='text' maxlength="5000" name="content" placeholder="请对此次服务进行评价"/>
+    <view class="btn" bindtap="confim">提交</view>
+  </view>
+</view>

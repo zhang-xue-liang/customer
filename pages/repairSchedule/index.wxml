@@ -1,0 +1,90 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<view class="repairSchedule">
+  <view class="title">
+    <view class="left">
+      <view class="item {{type=== 1 ?'active':''}}" bindtap="changeTab" data-idx='1'>
+        <view>工单事件</view>
+        <view class="border" wx:if="{{type==='1'}}">
+          <view></view>
+        </view>
+      </view>
+      <view class="item {{type=== 2 ?'active':''}}" bindtap="changeTab" data-idx='2'>
+        <view>服务事件</view>
+        <view class="border" wx:if="{{type==='2'}}">
+          <view></view>
+        </view>
+      </view>
+    </view>
+    <view class="right" bindtap="showPop">
+      <view>筛选</view>
+      <view class="bfont icon-arrowDown"></view>
+    </view>
+  </view>
+  <view class="list-wrap">
+    <view class="item" wx:for="{{listData}}" bindtap="toView" data-id="{{item.id}}">
+      <view class="top">
+        <view class="left">
+          <image src="../../images/more.png"></image>
+          <view>{{dateFir.workOrderStatus(item.status)}}</view>
+        </view>
+        <view class="right">提交时间：{{item.createTime}}</view>
+      </view>
+      <view class="main">
+        <view class="ite">
+          <view>订单号：</view>
+          <view>{{item.code}}</view>
+        </view>
+        <view class="ite">
+          <view>事件类型：</view>
+          <view>{{item.type1}}</view>
+        </view>
+        <view class="ite">
+          <view>服务内容：</view>
+          <view>{{item.type === 1 ? '维修服务' : '安装服务'}}</view>
+        </view>
+      </view>
+      <view class="pingjia">
+        <view class="left">服务评分：</view>
+        <view class="right">
+          <image wx:for="{{item.grade}}" wx:key="{{index}}" src="../../images/xing.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class="buttom" wx:if="{{noMore && !loading && total !== 0}}">没有更多...</view>
+    <view class="buttom" wx:if="{{loading}}">加载中...</view>
+    <view class="buttom" wx:if="{{!loading && total === 0}}">暂无数据</view>
+  </view>
+
+
+  <van-popup class="pop" show="{{ show }}" position="top" custom-style="width: 100%;height: 45%" bind:close="onClose">
+    <view class="main">
+      <view class="top">
+        <view class="right">
+          <view bindtap="showPop">筛选</view>
+          <view class="bfont icon-arrowUp"></view>
+        </view>
+      </view>
+      <view class="list">
+        <view class="titl">订单状态</view>
+        <view class="wrap">
+          <view class="item {{status === -1 ? 'active' : ''}}" bindtap="changeStatus" data-status="-1">全部</view>
+          <view class="item {{status === 1 ? 'active' : ''}}" bindtap="changeStatus" data-status="1">已派单</view>
+          <view class="item {{status === 0 ? 'active' : ''}}" bindtap="changeStatus" data-status="0">待分配</view>
+          <view class="item {{status === 2 ? 'active' : ''}}" bindtap="changeStatus" data-status="2">已完成</view>
+        </view>
+      </view>
+      <view class="list">
+        <view class="titl">评价</view>
+        <view class="wrap">
+          <view class="item {{comment === -1 ? 'active' : ''}}" bindtap="changeComment" data-status="-1">全部</view>
+          <view class="item {{comment === 1 ? 'active' : ''}}" bindtap="changeComment" data-status="1">已评价</view>
+          <view class="item {{comment === 0 ? 'active' : ''}}" bindtap="changeComment" data-status="0">未评价</view>
+        </view>
+      </view>
+      <view class="bot-btn">
+        <view bindtap="reset">重置</view>
+        <view bindtap="filter">确定</view>
+      </view>
+    </view>
+  </van-popup>
+</view>

@@ -1,0 +1,107 @@
+{
+  "description": "项目配置文件。",
+  "setting": {
+    "urlCheck": false,
+    "es6": false,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "lazyloadPlaceholderEnable": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": false,
+    "useApiHostProcess": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "useIsolateContext": true,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "showES6CompileOption": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.19.0",
+  "appid": "wxed7720768cf8e4b7",
+  "projectname": "%E7%94%A8%E6%88%B7%E7%AB%AF",
+  "scripts": {},
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "注册",
+          "pathName": "pages/registered/registered",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "工单",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "搜索",
+          "pathName": "pages/search/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "工单详情",
+          "pathName": "pages/orderDetail/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "工单回执",
+          "pathName": "pages/receipt/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "客户签字",
+          "pathName": "pages/signature/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "通知",
+          "pathName": "pages/notice/notice",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "工单提醒",
+          "pathName": "pages/gdNotice/index",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

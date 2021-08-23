@@ -1,0 +1,6 @@
+.login{
+  height: 100%;
+  background: #fff;
+  padding: 171rpx 30rpx 50rpx 30rpx;
+  box-sizing: border-box;
+}

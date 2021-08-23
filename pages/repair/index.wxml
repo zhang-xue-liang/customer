@@ -1,0 +1,140 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<view class="repair">
+  <view class="information">
+    <view class="title">报修信息</view>
+    <view class="content">
+      <view class="top">
+        <image src="../../images/bitian.png"></image>
+        <view>服务内容</view>
+      </view>
+      <view class="bot">
+        <picker bindchange="changeType" value="{{form.type}}" range="{{range.types}}">
+          <view class="picker">
+            {{range.types[form.type]}}
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <view class="instructions">
+    <view class="content">
+      <view class="top">
+        <image src="../../images/bitian.png"></image>
+        <view>情况说明</view>
+      </view>
+      <view class="bot">
+        <textarea fixed="true" bindinput="inputDesc" class='text' maxlength="5000" focus='{{focus}}' name="content" placeholder="点击输入遇到的问题"/>
+      </view>
+    </view>
+  </view>
+  <view class="pic">
+    <view class="top">
+      <view>照片/视频（2选1）</view>
+      <view>图片最多5张;视频最多1个，不超过30M</view>
+    </view>
+    <view class="main">
+      <view class="uplod-img">
+        <view wx:for="{{uploadImgList}}" wx:for-index="key" wx:key="key" class="it">
+          <image src="{{item}}"></image>
+          <view class="bfont icon-close" bindtap="delImg" data-id="{{key}}"></view>
+        </view>
+      </view>
+      <view class="vi" wx:if="{{video}}">
+        <video src="{{video}}"></video>
+        <view class="bfont icon-close" bindtap="delVi"></view>
+      </view>
+      <view class="uplod item" bindtap="doUpload" wx:if="{{isUP}}">
+        <view class="bfont icon-uplod"></view>
+        <view>{{upTip}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="product">
+    <view class="title">产品信息</view>
+    <view class="main">
+      <view class="item">
+        <view>序列号</view>
+        <view>{{productInfo.serialNo || productInfo.serial_no}}</view>
+      </view>
+      <view class="item">
+        <view>产品</view>
+        <view>{{productInfo.itemName || productInfo.item_name}}</view>
+      </view>
+      <view class="item">
+        <view>规格</view>
+        <view>{{productInfo.itemDesc}}</view>
+      </view>
+      <view class="item">
+        <view>购买日期</view>
+        <view>{{productInfo.buyTime || productInfo.item_simple_name || '暂无购买日期'}}</view>
+      </view>
+      <view class="item">
+        <view>安装日期</view>
+        <view>{{productInfo.installTime || '暂无安装日期' }}</view>
+      </view>
+      <view class="item">
+        <view>保修到期</view>
+        <view>{{productInfo.guaranteeTime || productInfo.guarantee || '暂无到期日期'}}</view>
+      </view>
+      <view class="item">
+        <view>购买平台</view>
+        <view>{{productInfo.platform || '暂无购买平台'}}</view>
+      </view>
+      <view class="item">
+        <view>安装师傅</view>
+        <view>{{productInfo.installWorker || '暂无安装师傅'}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="customer">
+    <view class="title">客户信息</view>
+    <view class="main">
+      <view class="item">
+        <view class="top">
+          <image src="../../images/bitian.png"></image>
+          <view>客户名称</view>
+        </view>
+        <view class="bot">
+          <input bindinput="inputName" type="text" placeholder="点击输入客户名称"/>
+        </view>
+      </view>
+      <view class="item">
+        <view class="top">
+          <image src="../../images/bitian.png"></image>
+          <view>联系方式</view>
+        </view>
+        <view class="bot">
+          <input bindinput="inputPhone" type="text" placeholder="点击输入联系人手机号"/>
+        </view>
+      </view>
+      <view class="item">
+        <view class="top">
+          <image src="../../images/bitian.png"></image>
+          <view>地址</view>
+        </view>
+        <view class="bot">
+          <view class="txt" bindtap="showArea">{{addressText}}</view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="top">
+          <image src="../../images/bitian.png"></image>
+          <view>详细地址</view>
+        </view>
+        <view class="bots">
+          <textarea bindinput="inputAddress" fixed="true" class='text' maxlength="5000" focus='{{focus}}' name="content" placeholder="点击输入详细的上门地址"/>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="btn">
+    <view bindtap="submit">提交</view>
+  </view>
+  <area id="areaPop" bindareadata="areadata"/>
+  <van-popup show="{{ showPo }}"  position="bottom" bind:close="close">
+    <view class="poMain">
+      <view class="item" bindtap="doUpVideo">上传视频</view>
+      <view class="item" bindtap="doUpPic">上传图片</view>
+    </view>
+  </van-popup>
+</view>

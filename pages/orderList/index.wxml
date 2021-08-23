@@ -1,0 +1,37 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<view class="order-list">
+  <view class="good-information">
+    <view class="item" wx:for="{{listData}}" bindtap="toView" data-index="{{index}}">
+      <view class="head">
+        <view>订单号：{{item.code}}</view>
+        <view class="yizifu" wx:if="{{item.accountStatus === '已到账' && item.deliveryState === 0}}">已支付</view>
+        <view class="yifahuo" wx:if="{{item.accountStatus === '已到账' && item.deliveryState === 2}}">已发货</view>
+<!--        <view class="yiwanc" wx:if="{{item.accountStatus === '已到账' && item.deliveryState === 2}}">已完成</view>-->
+      </view>
+<!--      商品信息-->
+      <view class="main" wx:for="{{item.orderItems}}" wx:for-item="product">
+        <view class="left">
+          <image src="http://jftg.oss-cn-shanghai.aliyuncs.com/img202002131642378862.jpg"></image>
+        </view>
+        <view class="right">
+          <view class="info">
+            <view>{{product.item_name}}</view>
+            <view>类别：暂无类别</view>
+            <view>备件编号：暂无编号</view>
+          </view>
+          <view class="act">
+            <view>￥{{product.price}}</view>
+            <view>×{{product.qty}}</view>
+            <view></view>
+          </view>
+        </view>
+      </view>
+      <view class="bot">
+        <view>购买平台：暂无平台</view>
+        <view>小计：￥{{item.payment}}</view>
+      </view>
+    </view>
+  </view>
+
+
+</view>

@@ -1,0 +1,19 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<view class="account">
+  <view class="empty"></view>
+  <view class="main">
+    <image src="{{userInfo.avatar}}"></image>
+    <view class="phone">{{}}</view>
+    <view class="txt">最近登录时间:{{}}</view>
+    <view class="btn" bindtap="logOut">退出登录</view>
+  </view>
+  <van-popup show="{{ show }}" bind:close="onClose" round="{{true}}">
+    <view class="pop-wrap">
+      <view class="txt">确定要退出此帐号吗？</view>
+      <view class="bots">
+        <view bindtap="onClose">取消</view>
+        <view bindtap="confim">确定</view>
+      </view>
+    </view>
+  </van-popup>
+</view>

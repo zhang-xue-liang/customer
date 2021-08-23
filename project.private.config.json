@@ -1,0 +1,114 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "登录",
+          "pathName": "pages/login/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "产品信息",
+          "pathName": "pages/productInfo/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "订单详情",
+          "pathName": "pages/orderDetail/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "订单列表",
+          "pathName": "pages/orderList/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "设备报修",
+          "pathName": "pages/repair/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "报修进度",
+          "pathName": "pages/repairSchedule/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "服务事件详情",
+          "pathName": "pages/servicerOrderDetail/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "知识库",
+          "pathName": "pages/knowledge/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商城",
+          "pathName": "pages/repairShop/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "设备查询",
+          "pathName": "pages/sbQuery/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "账号设置",
+          "pathName": "pages/accountSet/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "知识库详情",
+          "pathName": "pages/knowledgeDetail/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "申请售后",
+          "pathName": "pages/repair/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "首页",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "工单事件详情",
+          "pathName": "pages/workOrderDetail/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "评价",
+          "pathName": "pages/evaluation/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

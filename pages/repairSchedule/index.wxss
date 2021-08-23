@@ -1,0 +1,237 @@
+.repairSchedule{
+  min-height: 100%;
+  background: #F9F9F9;
+  box-sizing: border-box;
+}
+.repairSchedule .title{
+  height: 88rpx;
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+}
+.repairSchedule .title .left{
+  display: flex;
+  align-items: center;
+}
+.repairSchedule .title .left .item{
+  position: relative;
+}
+.repairSchedule .title .left .item view:nth-child(1){
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+}
+.repairSchedule .title .left .item .border{
+  position: absolute;
+  left: 0;
+  bottom: -6rpx;
+  width: 100%;
+  height: 3px;
+  display: flex;
+  justify-content: center;
+}
+.repairSchedule .title .left .item .border view{
+  width: 52rpx;
+  height: 3px;
+  border-radius: 3rpx;
+  background: #FC7431;
+}
+.repairSchedule .title .left .item:nth-child(1){
+  margin-right: 58rpx;
+}
+.repairSchedule .title .left .active view:nth-child(1){
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #FC7431;
+}
+.repairSchedule .title .right{
+  display: flex;
+  align-items: center;
+}
+.repairSchedule .title .right view:nth-child(1){
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  margin-right: 6rpx;
+}
+.repairSchedule .title .right view:nth-child(2){
+  color: #999;
+}
+.repairSchedule .pop .main{
+  position: relative;
+  height: 100%;
+}
+.repairSchedule .pop .main .top{
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 30rpx;
+  height: 88rpx;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+.repairSchedule .pop .main .top .right{
+  display: flex;
+}
+.repairSchedule .pop .main .top .right view:nth-child(1){
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  margin-right: 6rpx;
+  display: flex;
+  align-items: center;
+}
+.repairSchedule .pop .main .top .right view:nth-child(2){
+  color: #999;
+}
+.repairSchedule .pop .main .list{
+  padding: 30rpx 30rpx 0 30rpx;
+  margin-bottom: 10rpx;
+}
+.repairSchedule .pop .main .list .titl{
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 10rpx;
+}
+.repairSchedule .pop .main .list .wrap{
+  display: flex;
+}
+.repairSchedule .pop .main .list .wrap .item{
+  height: 56rpx;
+  padding: 0 32rpx;
+  border-radius: 10rpx;
+  border: 1px solid #ccc;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  line-height: 56rpx;
+  text-align: center;
+  margin-right: 30rpx;
+}
+.repairSchedule .pop .main .list .wrap .item.active{
+  color: #FC7431;
+  border: 1px solid #FC7431;
+}
+.repairSchedule .pop .main .bot-btn{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 80rpx;
+  width: 100%;
+  border-top: 1px solid rgba(204, 204, 204, 1);
+  display: flex;
+}
+.repairSchedule .pop .main .bot-btn view:nth-child(1){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+  text-align: center;
+  width: 50%;
+  line-height: 80rpx;
+}
+.repairSchedule .pop .main .bot-btn view:nth-child(2){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  width: 50%;
+  line-height: 80rpx;
+  background: rgba(252, 116, 49, 1);
+}
+
+.repairSchedule .list-wrap{
+  background: #F9F9F9;
+  padding: 30rpx;
+  height: 100%;
+}
+.repairSchedule .list-wrap .item{
+  background: #fff;
+  border-radius: 30rpx;
+  margin-bottom: 30rpx;
+  padding: 30rpx;
+}
+.repairSchedule .list-wrap .item .top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 30rpx;
+}
+.repairSchedule .list-wrap .item .top .left{
+  display: flex;
+  align-items: center;
+}
+.repairSchedule .list-wrap .item .top .left image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 20rpx;
+}
+.repairSchedule .list-wrap .item .top .left view{
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #FC7431;
+}
+.repairSchedule .list-wrap .item .top .right{
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+}
+/* .repairSchedule .list-wrap .item .main{
+  margin-bottom: 30rpx;
+} */
+.repairSchedule .list-wrap .item .main .ite{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+}
+.repairSchedule .list-wrap .item .main .ite view:nth-child(1){
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+.repairSchedule .list-wrap .item .main .ite view:nth-child(2){
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+  text-align: right;
+}
+.repairSchedule .list-wrap .item .pingjia{
+  padding-top: 30rpx;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+}
+.repairSchedule .list-wrap .item .pingjia .left{
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+.repairSchedule .list-wrap .item .pingjia .right{
+  display: flex;
+}
+.repairSchedule .list-wrap .item .pingjia .right image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 12rpx;
+}
+.buttom{
+  text-align: center;
+  font-size: 22rpx;
+  font-weight: 500;
+  color: #999999;
+}

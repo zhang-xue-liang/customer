@@ -1,0 +1,73 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<view class="order-detail">
+  <view class="top">
+    <view class="state" wx:if="{{item.accountStatus === '已到账' && item.deliveryState === 0}}">订单已支付</view>
+    <view class="state" wx:if="{{item.accountStatus === '已到账' && item.deliveryState === 2}}">订单已发货</view>
+    <view class="plantime">
+      <view>请到购买平台查看物流信息</view>
+    </view>
+  </view>
+  <view class="information">
+    <view class="title">收货信息</view>
+    <view class="main">
+      <view class="left">
+        <view class="bfont icon-location"></view>
+      </view>
+      <view class="right">
+        <view class="name">
+          <view>{{item.receiverName}}</view>
+          <view>{{item.receiverPhone}}</view>
+        </view>
+        <view class="address">
+          {{item.receiverAddress}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="order-information">
+    <view class="title">订单信息</view>
+    <view class="main">
+      <view class="item">
+        <view class="left">订单编号</view>
+        <view class="right">{{item.code}}</view>
+      </view>
+      <view class="item">
+        <view class="left">支付方式</view>
+        <view class="right">暂无支付方式</view>
+      </view>
+      <view class="item">
+        <view class="left">交易平台</view>
+        <view class="right">暂无交易平台</view>
+      </view>
+      <view class="item">
+        <view class="left">下单时间</view>
+        <view class="right">{{item.createtime}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="good-information">
+    <view class="title">商品信息</view>
+    <view class="main">
+      <view class="item" wx:for="{{item.orderItems}}" wx:for-item="product">
+        <view class="left">
+          <image src="http://jftg.oss-cn-shanghai.aliyuncs.com/img202002131642378862.jpg"></image>
+        </view>
+        <view class="right">
+          <view class="info">
+            <view>{{product.item_name}}</view>
+            <view>类别：暂无类别</view>
+            <view>备件编号：暂无编号</view>
+          </view>
+          <view class="act">
+            <view>￥{{product.price}}</view>
+            <view>×{{product.qty}}</view>
+            <view bindtap="toApply" data-obj="{{product}}">申请售后</view>
+          </view>
+        </view>
+      </view  >
+    </view>
+    <view class="total">
+      小计：￥{{item.payment}}
+    </view>
+  </view>
+</view>

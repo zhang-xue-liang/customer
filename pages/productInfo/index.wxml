@@ -1,0 +1,58 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<view class="productInfo">
+  <view class="main baseInfo">
+    <view class="item">
+      <view class="left">序列号</view>
+      <view class="right">{{detail.serialNo}}</view>
+    </view>
+    <view class="item">
+      <view class="left">产品型号</view>
+      <view class="right">{{detail.itemName}}</view>
+    </view>
+    <view class="item">
+      <view class="left">产品参数</view>
+      <view class="right">{{detail.itemDesc}}</view>
+    </view>
+  </view>
+  <view class="main">
+    <view class="item">
+      <view class="left">购买日期</view>
+      <view class="right">{{detail.buyTime ? detail.buyTime : '暂无购买日期'}}</view>
+    </view>
+    <view class="item">
+      <view class="left">销售人员</view>
+      <view class="right">{{detail.saleName}}</view>
+    </view>
+    <view class="item">
+      <view class="left">平台</view>
+      <view class="right">{{detail.platform}}</view>
+    </view>
+    <view class="item">
+      <view class="left">发货日期</view>
+      <view class="right">{{detail.sendTime ? detail.sendTime : '暂无发货日期' }}</view>
+    </view>
+    <view class="item">
+      <view class="left">安装师傅</view>
+      <view class="right">{{detail.installWorker || '暂无安装师傅' }}</view>
+    </view>
+    <view class="item">
+      <view class="left">安装日期</view>
+      <view class="right">{{detail.installTime ? detail.installTime : '暂无安装日期' }}</view>
+    </view>
+    <view class="item">
+      <view class="left">保修到期</view>
+      <view class="right">{{detail.guaranteeTime ? detail.guaranteeTime : '暂无到期日期' }}</view>
+    </view>
+    <view class="item">
+      <view class="left">订单号</view>
+      <view class="active">{{detail.orderNo}}</view>
+    </view>
+    <view class="item">
+      <view class="left">安装地址</view>
+      <view class="right">{{detail.installAddress ? detail.installAddress : '暂无安装地址'}}</view>
+    </view>
+  </view>
+  <view class="btn" bindtap="apply">
+    <view>申请售后</view>
+  </view>
+</view>

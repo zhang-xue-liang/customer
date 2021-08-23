@@ -1,0 +1,65 @@
+.equipment{
+  height: 100%;
+  background: #fff;
+  box-sizing: border-box;
+}
+.equipment .main{
+  padding: 30rpx;
+}
+.equipment .main .title{
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 26rpx;
+}
+.equipment .main .ipt{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #999;
+}
+.equipment .main .ipt input{
+  flex: 1;
+  padding-bottom: 10rpx;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.equipment .main .ipt .scanBox{
+  width: 80rpx;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.equipment .main .ipt image{
+  width: 34rpx;
+  height: 34rpx;
+}
+.equipment .main .quert{
+  width: 100%;
+  height: 88rpx;
+  background: #FC7431;
+  text-align: center;
+  line-height: 88rpx;
+  border-radius: 10rpx;
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin: 30rpx 0;
+}
+.equipment .main .change{
+  width: 100%;
+  height: 84rpx;
+  border: 1px solid #FC7431;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 88rpx;
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #FC7431;
+}

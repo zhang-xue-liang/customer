@@ -1,0 +1,268 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<wxs module="util1">
+  var sub = function(val) {
+  return val.substring(0, 10)
+  }
+  module.exports={
+   sub:sub
+  }
+</wxs>
+<wxs module="util2">
+  var sub = function(val) {
+    return val.substring(16, 11)
+  }
+  module.exports={
+   sub:sub
+  }
+</wxs>
+
+<view class="loading" wx:if="{{loading}}">加载中...</view>
+<view wx:if="{{!loading}}" class="incident">
+  <view class="title">
+    <view class="item {{type==='1'?'active':''}}" bindtap="changeTab" data-idx='1'>
+      <view>事件进度</view>
+      <view class="border" wx:if="{{type==='1'}}">
+        <view></view>
+      </view>
+    </view>
+    <view class="item {{type==='2'?'active':''}}" bindtap="changeTab" data-idx='2'>
+      <view>关联工单</view>
+      <view class="border" wx:if="{{type==='2'}}">
+        <view></view>
+      </view>
+    </view>
+    <view class="item {{type==='3'?'active':''}}" bindtap="changeTab" data-idx='3'>
+      <view>产品信息</view>
+      <view class="border" wx:if="{{type==='3'}}">
+        <view></view>
+      </view>
+    </view>
+    <view class="item {{type==='5'?'active':''}}" bindtap="changeTab" data-idx='5'>
+      <view>评价</view>
+      <view class="border" wx:if="{{type==='5'}}">
+        <view></view>
+      </view>
+    </view>
+  </view>
+  <view class="schedule-main" wx:if="{{type==='1'}}">
+  <!-- 服务事件工单事件公用“进度” -->
+    <view class="schedule">
+      <view class="titl">处理进度</view>
+      <view class="wrap">
+        <!-- <van-steps
+          steps="{{ view.logs }}"
+          active="{{ view.logs-1 }}"
+          direction="vertical"
+          active-color="#666666"
+          inactive-color="#666666"
+        /> -->
+        <view class="item {{key === 0?'first':'' }} {{key === 1?'second':'' }} {{key === length?'last':'' }}"  wx:for="{{view.logs}}" wx:for-index="key" wx:for-item="item">
+          <view class="left">
+            <view>{{util1.sub(item.createTime)}}</view>
+            <view>{{util2.sub(item.createTime)}}</view>
+          </view>
+          <view class="center">
+            <view class="cricle">
+              <view></view>
+            </view>
+            <view class="line-top"></view>
+            <view class="line-bot"></view>
+          </view>
+          <view class="right">
+            <view>{{item.content}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="customerInfo">
+      <view class="titl">客户信息</view>
+      <view class="customerInfo-main">
+        <view class="item">
+          <view>客户名称</view>
+          <view>{{view.clientInfo.clientName}}</view>
+        </view>
+        <view class="item">
+          <view>手机号</view>
+          <view>{{view.clientInfo.clientMobile}}</view>
+        </view>
+        <view class="item">
+          <view>地址</view>
+          <view>{{view.clientInfo.address}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="eventInfo">
+      <view class="titl">事件信息</view>
+      <view class="eventInfo-main">
+        <view class="item">
+          <view class="left">事件编号</view>
+          <view class="right">
+            <view>{{view.incidentInfo.code}}</view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="left">事件类型</view>
+          <view class="right">
+            <view>{{view.incidentInfo.type}}</view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="left">服务内容</view>
+          <view class="right">
+            <view>{{view.incidentInfo.serviceContent === 1 ? '维修服务' : '安装服务'}}</view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="left">情况说明</view>
+          <view class="right">
+            <view>{{view.incidentInfo.eventDesc}}</view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="left">图片/视频</view>
+          <view class="right">
+            <image wx:if="{{view.incidentInfo.video}}" src="../../images/video.png" bindtap="playVideo"></image>
+            <image wx:if="{{!view.incidentInfo.video}}" wx:for="{{view.incidentInfo.pictures || []}}" wx:key="{{index}}" src="{{item}}" data-src="{{item}}" bindtap="previewImage"></image>
+            <!-- <video src="{{view.incidentInfo.video}}"></video> -->
+          </view>
+        </view>
+        <view class="item">
+          <view class="left">负责人</view>
+          <view class="right">
+            <view>{{view.incidentInfo.workerName}}</view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="left">手机号</view>
+          <view class="right">
+            <view>{{view.incidentInfo.workerMobile}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="btn-area">
+      <view class="btn-areamain">
+        <!-- <view wx:if="{{view.status === 2 && view.price !== 0}}">申请开票</view> -->
+        <view wx:if="{{view.status === 0}}" bindtap="cancelService">取消服务</view>
+        <view wx:if="{{view.status === 2}}" bindtap="servicePJ">服务评价</view>
+        <!-- <view bindtap="cancelPop">取消服务</view>
+        <view bindtap="servicePJ">服务评价</view> -->
+      </view>
+    </view>
+  </view>
+  <view class="orders" wx:if="{{type==='2'}}">
+<!--    关联工单-->
+    <view class="order" wx:for="{{view.orders}}" wx:key="{{index}}">
+      <view class="item">
+        <view class="label">工单编号</view>
+        <view class="value">{{item.code}}</view>
+      </view>
+      <view class="item">
+        <view class="label">服务内容</view>
+        <view class="value">{{item.serviceType === 1 ? '维修服务' : '安装服务'}}</view>
+      </view>
+      <view class="item">
+        <view class="label">工单状态</view>
+        <view class="value">{{serviceOrderStatus(item.status)}}</view>
+      </view>
+      <view class="item">
+        <view class="label">负责人</view>
+        <view class="value">{{item.creatorName}}</view>
+      </view>
+      <view class="item">
+        <view class="label">创建时间</view>
+        <view class="value">{{item.createTime}}</view>
+      </view>
+      <view class="item">
+        <view class="label">完成时间</view>
+        <view class="value">{{item.completeTime}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="canpin" wx:if="{{type==='3'}}" wx:for="{{view.productInfo}}" wx:key="{{index}}">
+    <view class="main">
+      <view class="titl">产品信息</view>
+      <view class="item">
+        <view class="xingh">
+          <view>产品型号</view>
+          <view>{{item.model}}</view>
+        </view>
+        <view class="canshu">
+          <view class="ti">产品参数</view>
+          <view class="wrap">
+            <view>{{item.color}}</view>
+            <view>{{item.openDirect}}</view>
+            <view>{{item.lockLength}}</view>
+            <view>{{hook}}天地钩</view>
+            <view>{{item.guideSize}}</view>
+            <view>{{item.lockType}}</view>
+          </view>
+        </view> 
+      </view>
+    </view>
+    <view class="other">
+      <view class="tit">其他信息</view>
+      <view class="item">
+        <view>购买日期</view>
+        <view>{{item.buyTime}}</view>
+      </view>
+      <view class="item">
+        <view>销售人员</view>
+        <view>{{item.saleName}}</view>
+      </view>
+      <view class="item">
+        <view>平台</view>
+        <view>{{item.platform}}</view>
+      </view>
+      <view class="item">
+        <view>发货日期</view>
+        <view>{{item.sendTime}}</view>
+      </view>
+      <view class="item">
+        <view>安装师傅</view>
+        <view>{{item.installWorker}}</view>
+      </view>
+      <view class="item">
+        <view>安装日期</view>
+        <view>{{item.installTime}}</view>
+      </view>
+      <view class="item">
+        <view>保修到期</view>
+        <view>{{item.guaranteeTime}}</view>
+      </view>
+      <view class="item">
+        <view>订单号</view>
+        <view>{{item.orderNo}}</view>
+      </view>
+      <view class="item">
+        <view>安装地址</view>
+        <view>{{item.installAddr}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="pingjia" wx:if="{{type==='5'}}">
+    <view class="pingjia-wrap">
+      <view class="xing">
+        <image wx:for="{{view.commentInfo.grade}}" wx:key="{{index}}" src="../../images/xing.png"></image>
+      </view>
+      <view class="tip">评分：{{view.commentInfo.grade}}</view>
+      <view class="txt">{{view.commentInfo.desc}}</view>
+    </view>
+  </view>
+  <van-popup show="{{ show }}" bind:close="onClose" position="bottom">
+    <view class="pop-v">
+      <video src="{{view.incidentInfo.video}}" enable-progress-gesture="true"></video>
+    </view>
+  </van-popup>
+
+  <van-popup show="{{ showCancel }}" bind:close="onCancelClose" round="{{true}}">
+    <view class="pop-wrap">
+      <view class="txt">确定要取消本次服务请求吗？</view>
+      <view class="txt">工作人员马上就要开始处理请求了</view>
+      <view class="bots">
+        <view bindtap="onCancelClose">取消</view>
+        <view bindtap="cancelService">确定</view>
+      </view>
+    </view>
+  </van-popup>
+</view>
