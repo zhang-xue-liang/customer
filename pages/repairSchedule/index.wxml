@@ -4,13 +4,13 @@
     <view class="left">
       <view class="item {{type=== 1 ?'active':''}}" bindtap="changeTab" data-idx='1'>
         <view>工单事件</view>
-        <view class="border" wx:if="{{type==='1'}}">
+        <view class="border" wx:if="{{type===1}}">
           <view></view>
         </view>
       </view>
       <view class="item {{type=== 2 ?'active':''}}" bindtap="changeTab" data-idx='2'>
         <view>服务事件</view>
-        <view class="border" wx:if="{{type==='2'}}">
+        <view class="border" wx:if="{{type===2}}">
           <view></view>
         </view>
       </view>
@@ -36,10 +36,11 @@
         </view>
         <view class="ite">
           <view>事件类型：</view>
-          <view>{{item.type1}}</view>
+          <view wx:if="{{type===1}}">工单事件</view>
+          <view wx:if="{{type===2}}">服务事件</view>
         </view>
         <view class="ite">
-          <view>服务内容：</view>
+          <view>服务类型</view>
           <view>{{item.type === 1 ? '维修服务' : '安装服务'}}</view>
         </view>
       </view>

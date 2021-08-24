@@ -16,18 +16,18 @@
         <view class="right">
           <view class="info">
             <view>{{product.item_name}}</view>
-            <view>类别：暂无类别</view>
-            <view>备件编号：暂无编号</view>
+            <view>型号：{{product.item_simple_name}}</view>
+            <!-- <view>备件编号：暂无编号</view> -->
           </view>
           <view class="act">
             <view>￥{{product.price}}</view>
             <view>×{{product.qty}}</view>
-            <view></view>
+            <!-- <view></view> -->
           </view>
         </view>
       </view>
       <view class="bot">
-        <view>购买平台：暂无平台</view>
+        <view>平台单号：{{item.platform_code}}</view>
         <view>小计：￥{{item.payment}}</view>
       </view>
     </view>

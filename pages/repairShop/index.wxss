@@ -53,7 +53,7 @@
   color: #333333;
 }
 .repair .list .item .right .center{
-  display: flex;
+  /* display: flex; */
 }
 .repair .list .item .right .center .binhao{
   display: flex;

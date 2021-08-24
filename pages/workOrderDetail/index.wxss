@@ -227,6 +227,11 @@
   font-weight: 500;
   color: #999999;
 }
+.incident .schedule-main .eventInfo .eventInfo-main .item .right image{
+  width: 66rpx;
+  height: 66rpx;
+  margin-right: 20rpx;
+}
 .incident .schedule-main .btn-area{
   margin-top: 30rpx;
 }
@@ -440,6 +445,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.incident .gd-receipt .otherInfo .otherInfo-main .qianming .qmwrap image{
+  width: 190rpx;
+  height: 580rpx;
+  display: block;
+  transform-origin:51% 50%;
+  transform:rotate(-90deg);
 }
 
 .incident .canpin{
@@ -666,3 +678,8 @@
   background: #FC7431;
 }
 
+
+.incident .pop-v video{
+  width: 100%;
+  display: block;
+}

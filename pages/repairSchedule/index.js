@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    type: 2,//1工单 2服务
+    type: 1,//1工单 2服务
     show: false,
     loading:false,
     noMore:false,

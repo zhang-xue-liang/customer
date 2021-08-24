@@ -110,7 +110,8 @@
         <view class="item">
           <view class="left">图片/视频</view>
           <view class="right">
-            <image wx:for="{{view.incidentInfo.pictures || []}}" wx:key="{{index}}" src="{{item}}"></image>
+            <image wx:if="{{view.incidentInfo.video}}" src="../../images/video.png" bindtap="playVideo"></image>
+            <image wx:if="{{!view.incidentInfo.video}}" wx:for="{{pictures || []}}" wx:key="{{index}}" src="{{item}}" data-src="{{item}}" bindtap="previewImage"></image>
           </view>
         </view>
         <view class="item">
@@ -140,14 +141,14 @@
     <view class="attachment">
       <view class="titl">回执附件</view>
       <view class="attachment-main">
-        <image wx:for="{{view.receiptInfo.enclosures}}" wx:key="{{index}}">{{item}}</image>
+        <image wx:for="{{view.receiptInfo.enclosures || []}}" wx:key="{{index}}" src="{{item}}" data-src="{{item}}" bindtap="previewHzImage"></image>
       </view>
     </view>
     <view class="partsInfo">
       <view class="titl">备件信息</view>
-      <view class="item" wx:for="{{view.receiptInfo.sparePart.spareParts}}" wx:key="{{index}}">
+      <view class="item" wx:for="{{view.receiptInfo.spareParts.spareParts}}" wx:key="{{index}}" wx:for-item="item">
         <view class="info1">
-          <view class="name">螺丝刀</view>
+          <view class="name">{{item.name}}</view>
           <view class="price">￥{{item.priceValue}}</view>
         </view>
         <view class="info2">
@@ -159,10 +160,11 @@
           <view class="number">x{{item.number}}</view>
         </view>
       </view>
-      <view class="total">
+      <!-- <view class="total">
         <view class="number">共{{view.receiptInfo.spareParts.number || 0}}件</view>
-        <view class="price">总计：{{view.receiptInfo.spareParts.price || 0}}元</view>
-      </view>
+        <view></view>
+        <view class="price">总计：{{view.receiptInfo.totalFee || 0}}元</view>
+      </view> -->
     </view>
     <view class="otherInfo">
       <view class="titl">其他信息</view>
@@ -182,7 +184,7 @@
         <view class="qianming">
           <view class="ti">客户签名</view>
           <view class="qmwrap">
-            <view>{{view.receiptInfo.customSignature}}</view>
+            <image src="{{view.receiptInfo.customSignature}}"></image>
           </view>
         </view>
       </view>
@@ -256,7 +258,7 @@
     <view class="parts-main">
       <view class="titl">订单id：1554587487845</view>
       <view class="list">
-        <view class="part-item" wx:for="{{view.sparePartInfo.spareParts}}" wx:key="{{index}}">
+        <view class="part-item" wx:for="{{view.sparePartInfos}}" wx:key="{{index}}">
           <view class="item">
             <view>备件名称</view>
             <view>{{item.name}}</view>
@@ -282,15 +284,15 @@
       <view class="total">
         <view class="item">
           <view>小计</view>
-          <view>{{view.sparePartInfo.price}}</view>
+          <view>{{view.sparePartInfos.price}}</view>
         </view>
         <view class="item">
           <view>快递</view>
-          <view>{{view.sparePartInfo.expressName}}</view>
+          <view>{{view.sparePartInfos.expressName}}</view>
         </view>
         <view class="item">
           <view>快递单号</view>
-          <view>{{view.sparePartInfo.expressNo}}</view>
+          <view>{{view.sparePartInfos.expressNo}}</view>
         </view>
       </view>
     </view>
@@ -321,6 +323,12 @@
         <view bindtap="onClose" bindtap="onCloseInvoErr">取消</view>
         <view bindtap="confim" bindtap="onCloseInvoErr">确定</view>
       </view>
+    </view>
+  </van-popup>
+
+  <van-popup show="{{ videoPop }}" bind:close="onVideoClose" position="bottom">
+    <view class="pop-v">
+      <video src="{{video}}" enable-progress-gesture="true"></video>
     </view>
   </van-popup>
 </view>

@@ -31,14 +31,14 @@
         <view class="left">订单编号</view>
         <view class="right">{{item.code}}</view>
       </view>
-      <view class="item">
+      <!-- <view class="item">
         <view class="left">支付方式</view>
         <view class="right">暂无支付方式</view>
-      </view>
-      <view class="item">
+      </view> -->
+      <!-- <view class="item">
         <view class="left">交易平台</view>
         <view class="right">暂无交易平台</view>
-      </view>
+      </view> -->
       <view class="item">
         <view class="left">下单时间</view>
         <view class="right">{{item.createtime}}</view>

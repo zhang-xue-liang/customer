@@ -1,19 +1,24 @@
 import { workOrder, openVoice }  from '../../api/service'
 import {error} from "../../utils/toast";
+const { imgBaseUrl } = require('../../utils/config')
 
 Page({
   /**
    * 页面的初始数据
    */
   data: {
+    imgBaseUrl: imgBaseUrl,
     type: '1',
     loading:false,
-    view:{
-    },
+    view:{},
+    pictures: [],
     id: '',
     length: '',
     showInvo: false,
-    showInvoErr: false
+    showInvoErr: false,
+    videoPop: false,
+    video: '',
+
   },
   async getView(id){
     try{
@@ -27,10 +32,16 @@ Page({
           el.text = el.createTime
         })
         data.data.commentInfo.gradeInt =  Math.floor(data.data.commentInfo.grade)
-
+        const list = []
+        data.data.incidentInfo.pictures.forEach(item => {
+          const it = imgBaseUrl + item
+          list.push(it)
+        })
         this.setData({
           view: data.data,
+          pictures: list,
           loading: false,
+          video: imgBaseUrl + data.data.incidentInfo.video,
           length: data.data.logs.length -1
         })
       }else{
@@ -38,6 +49,33 @@ Page({
         error(data.msg)
       }
     }catch (e){ error(e.toString()) }
+  },
+  // 看回执大图
+  previewHzImage(e){
+    var curren=e.target.dataset.src
+    wx.previewImage({
+      current: curren,
+      urls: this.data.view.receiptInfo.enclosures
+    })
+  },
+  // 看大图
+  previewImage(e){
+    var curren=e.target.dataset.src
+    wx.previewImage({
+      current: curren,
+      urls: this.data.pictures
+    })
+  },
+  // 看视频
+  playVideo(){
+    this.setData({
+      videoPop: true
+    })
+  },
+  onVideoClose(){
+    this.setData({
+      videoPop: false
+    })
   },
   // 工单评价
   gdPJ(){
